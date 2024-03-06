@@ -1,2 +1,2 @@
-# ReactNativeFIrstApp
+# ReactNativeFirstApp
 First APP using React native 
