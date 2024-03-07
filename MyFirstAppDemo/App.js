@@ -1,19 +1,36 @@
 // import { StatusBar } from "expo-status-bar";
-import { WelcomeScreen } from "./app/screens/WelcomeScreen.js";
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { FunctionalComponent } from "./test";
+import { StyleSheet, Text, View, Button } from "react-native";
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: "green",
-        width: 120,
-        height: 120,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    (
+      <Button
+        title="press me"
+        style={{ color: "black", width: 100, height: 100 }}
+        onPress={FunctionalComponent("hi luca")}
+      ></Button>
+    ),
+    (
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: "green",
+          width: 120,
+          height: 120,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      ></View>
+    )
+  );
+}
+
+function FunctionalComponent1(params) {
+  return (
+    console.log(params),
+    (
       <View
         style={{
           backgroundColor: "red",
@@ -23,6 +40,6 @@ export default function App() {
           alignItems: "center",
         }}
       ></View>
-    </View>
+    )
   );
 }
